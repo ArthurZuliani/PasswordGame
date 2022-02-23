@@ -1,0 +1,109 @@
+
+.container {
+    width: 80%;
+    margin: 10px auto;
+    border: solid 2px purple;
+    background-color: lightgray;
+}
+
+p {
+    position: relative;
+    top: 50%;
+}
+
+
+#hintBox {
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    color: purple;
+    text-align: center;
+}
+
+#row2 {
+    display: none;
+}
+
+#row3 {
+    display: none;
+}
+
+#row4 {
+    display: none;
+}
+
+#row5 {
+    display: none;
+}
+
+#row6 {
+    display: none;
+}
+
+#row7 {
+    display: none;
+}
+
+#row8 {
+    display: none;
+}
+
+#row9 {
+    display: none;
+}
+
+#row10 {
+    display: none;
+}
+
+.col-md-4 {
+    /*flex: 0 0 auto;*/
+    padding: 0px;
+    /*width: 300px;*/
+}
+
+.col-md-1 h1 {
+    margin: 0;
+}
+
+.col-md-1 {
+    padding: 15px 0 0 0;
+    margin: 0;
+}
+
+.col-md-3 {
+     padding: 16px 0 0 50px;
+}
+
+.button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: solid black 2px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+.answer {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: solid black 2px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+.submit {
+    height: 40px;
+    border: solid purple 2px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    /*margin: 10px;*/
+}

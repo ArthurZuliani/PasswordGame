@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, world!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body onload="passGenerator()">
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-2">
+
+        <!-- A hint box will be included in further versions -->
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Your attempt</h1>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <h1>Hint</h1>
+                </div>
+            </div>
+
+            <!-- 1st row of the game   -->
+            <div class="row" id="row1">
+                <div class="col-md-4">
+                    <button class="button" id="r1c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r1c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r1c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r1c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>1st</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar1c1"></div>
+                    <div class="answer" id="ar1c2"></div>
+                    <div class="answer" id="ar1c3"></div>
+                    <div class="answer" id="ar1c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow1">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 2nd row of the game   -->
+            <div class="row" id="row2">
+                <div class="col-md-4">
+                    <button class="button" id="r2c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r2c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r2c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r2c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>2nd</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar2c1"></div>
+                    <div class="answer" id="ar2c2"></div>
+                    <div class="answer" id="ar2c3"></div>
+                    <div class="answer" id="ar2c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow2">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 3rd row of the game   -->
+            <div class="row" id="row3">
+                <div class="col-md-4">
+                    <button class="button" id="r3c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r3c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r3c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r3c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>3rd</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar3c1"></div>
+                    <div class="answer" id="ar3c2"></div>
+                    <div class="answer" id="ar3c3"></div>
+                    <div class="answer" id="ar3c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow3">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 4th row of the game   -->
+            <div class="row" id="row4">
+                <div class="col-md-4">
+                    <button class="button" id="r4c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r4c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r4c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r4c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>4th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar4c1"></div>
+                    <div class="answer" id="ar4c2"></div>
+                    <div class="answer" id="ar4c3"></div>
+                    <div class="answer" id="ar4c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow4">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 5th row of the game   -->
+            <div class="row" id="row5">
+                <div class="col-md-4">
+                    <button class="button" id="r5c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r5c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r5c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r5c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>5th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar5c1"></div>
+                    <div class="answer" id="ar5c2"></div>
+                    <div class="answer" id="ar5c3"></div>
+                    <div class="answer" id="ar5c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow5">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 6th row of the game   -->
+            <div class="row" id="row6">
+                <div class="col-md-4">
+                    <button class="button" id="r6c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r6c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r6c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r6c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>6th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar6c1"></div>
+                    <div class="answer" id="ar6c2"></div>
+                    <div class="answer" id="ar6c3"></div>
+                    <div class="answer" id="ar6c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow6">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 7th row of the game   -->
+            <div class="row" id="row7">
+                <div class="col-md-4">
+                    <button class="button" id="r7c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r7c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r7c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r7c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>7th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar7c1"></div>
+                    <div class="answer" id="ar7c2"></div>
+                    <div class="answer" id="ar7c3"></div>
+                    <div class="answer" id="ar7c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow7">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 8th row of the game   -->
+            <div class="row" id="row8">
+                <div class="col-md-4">
+                    <button class="button" id="r8c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r8c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r8c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r8c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>8th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar8c1"></div>
+                    <div class="answer" id="ar8c2"></div>
+                    <div class="answer" id="ar8c3"></div>
+                    <div class="answer" id="ar8c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow8">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 9th row of the game   -->
+            <div class="row" id="row9">
+                <div class="col-md-4">
+                    <button class="button" id="r9c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r9c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r9c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r9c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>9th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar9c1"></div>
+                    <div class="answer" id="ar9c2"></div>
+                    <div class="answer" id="ar9c3"></div>
+                    <div class="answer" id="ar9c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow9">Submit answer</button>
+                </div>
+            </div>
+
+            <!-- 10th row of the game   -->
+            <div class="row" id="row10">
+                <div class="col-md-4">
+                    <button class="button" id="r10c1" onclick='changeColor(id)'></button>
+                    <button class="button" id="r10c2" onclick='changeColor(id)'></button>
+                    <button class="button" id="r10c3" onclick='changeColor(id)'></button>
+                    <button class="button" id="r10c4" onclick='changeColor(id)'></button>
+                </div>
+                <div class="col-md-1">
+                    <h1>10th</h1>
+                </div>
+                <div class="col-md-4">
+                    <div class="answer" id="ar10c1"></div>
+                    <div class="answer" id="ar10c2"></div>
+                    <div class="answer" id="ar10c3"></div>
+                    <div class="answer" id="ar10c4"></div>
+                </div>
+                <div class="col-md-3">
+                    <button class="submit" onclick="checkAnswer()" id="buttonRow10">Submit answer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/game.js"></script>
+
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
