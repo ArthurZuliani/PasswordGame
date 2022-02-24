@@ -20,7 +20,8 @@
 
         <!-- A hint box will be included in further versions -->
         </div>
-        <div class="col-lg-10">
+        <div id="board" class="col-lg-10">
+
             <div class="row">
                 <div class="col-md-4">
                     <h1>Your attempt</h1>
@@ -31,7 +32,7 @@
                 </div>
             </div>
 
-            <!-- 1st row of the game   -->
+            <!--
             <div class="row" id="row1">
                 <div class="col-md-4">
                     <button class="button" id="r1c1" onclick='changeColor(id)'></button>
@@ -53,7 +54,6 @@
                 </div>
             </div>
 
-            <!-- 2nd row of the game   -->
             <div class="row" id="row2">
                 <div class="col-md-4">
                     <button class="button" id="r2c1" onclick='changeColor(id)'></button>
@@ -75,7 +75,6 @@
                 </div>
             </div>
 
-            <!-- 3rd row of the game   -->
             <div class="row" id="row3">
                 <div class="col-md-4">
                     <button class="button" id="r3c1" onclick='changeColor(id)'></button>
@@ -97,7 +96,6 @@
                 </div>
             </div>
 
-            <!-- 4th row of the game   -->
             <div class="row" id="row4">
                 <div class="col-md-4">
                     <button class="button" id="r4c1" onclick='changeColor(id)'></button>
@@ -119,7 +117,6 @@
                 </div>
             </div>
 
-            <!-- 5th row of the game   -->
             <div class="row" id="row5">
                 <div class="col-md-4">
                     <button class="button" id="r5c1" onclick='changeColor(id)'></button>
@@ -141,7 +138,6 @@
                 </div>
             </div>
 
-            <!-- 6th row of the game   -->
             <div class="row" id="row6">
                 <div class="col-md-4">
                     <button class="button" id="r6c1" onclick='changeColor(id)'></button>
@@ -163,7 +159,6 @@
                 </div>
             </div>
 
-            <!-- 7th row of the game   -->
             <div class="row" id="row7">
                 <div class="col-md-4">
                     <button class="button" id="r7c1" onclick='changeColor(id)'></button>
@@ -185,7 +180,6 @@
                 </div>
             </div>
 
-            <!-- 8th row of the game   -->
             <div class="row" id="row8">
                 <div class="col-md-4">
                     <button class="button" id="r8c1" onclick='changeColor(id)'></button>
@@ -207,7 +201,6 @@
                 </div>
             </div>
 
-            <!-- 9th row of the game   -->
             <div class="row" id="row9">
                 <div class="col-md-4">
                     <button class="button" id="r9c1" onclick='changeColor(id)'></button>
@@ -229,7 +222,6 @@
                 </div>
             </div>
 
-            <!-- 10th row of the game   -->
             <div class="row" id="row10">
                 <div class="col-md-4">
                     <button class="button" id="r10c1" onclick='changeColor(id)'></button>
@@ -250,6 +242,7 @@
                     <button class="submit" onclick="checkAnswer()" id="buttonRow10">Submit answer</button>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </div>
@@ -257,7 +250,8 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!--<script src="js/bootstrap.js"></script>-->
-<script src="js/game.js"></script>
+<script src="game/generate-board.js"></script>
+<script src="game/game.js"></script>
 
 <!--
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

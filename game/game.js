@@ -11,11 +11,24 @@ let correctColor = 0;
 
 let currentRow = 1;
 
+/**
+ * This method changes color of each button of each attempt
+ * 
+ * @param {*} elementId 
+ * 
+ * @author Arthur Zuliani
+ * @since 20220223
+ */
 function changeColor(elementId) {
 
     //Detect element position in the game
-    let colIndex = Number(elementId.substring(3, 4) - 1);
+    let colIndex = 0;
 
+    if(elementId.length < 5) {
+        colIndex = Number(elementId.substring(3, 4) - 1);
+    } else {
+        colIndex = Number(elementId.substring(4, 5) - 1);
+    } 
 
     //Detects the current color of the button
     switch (answerInput[colIndex]) {
@@ -71,6 +84,13 @@ function checkAnswer() {
     correctPos = 0;
     let passMatch = true;
 
+    console.log('----------- Before checking --------------');
+    console.log('Ans    ' + answerInput);
+    console.log('BufAns ' + bufInput);
+    console.log('BufPas ' + bufPass);
+    console.log('Pas    ' + password);
+    console.log('-------------------------');
+
     //First check if the colors are in the right position
     for (let i = 0; i < password.length; i++) {
 
@@ -85,7 +105,7 @@ function checkAnswer() {
         }
     }
 
-    console.log('-------------------------');
+    console.log('----------- After checking --------------');
     console.log('Ans    ' + answerInput);
     console.log('BufAns ' + bufInput);
     console.log('BufPas ' + bufPass);
@@ -113,7 +133,7 @@ function checkAnswer() {
 
     //Debug info
     console.log('final value: ' + bufInput);
-    console.log('Color #: ' + correctColor + ' Pos #: ' + correctPos);
+    console.log(`row count (${currentRow})`);
 
     if (passMatch) {
         alert('You won!!!');
@@ -121,23 +141,22 @@ function checkAnswer() {
     } else {
         //Change the color of tip circles
         changeTipColor();
+        
+        //Lock previous row buttons
+        lockButtons();
+        
+        //Change for the next attempt (row)
+        currentRow++;
+
+        if (currentRow <= MAX_ATTEMPTS) {
+            document.getElementById('row' + currentRow).style.display = 'flex';
+            answerInput = ['white', 'white', 'white', 'white'];
+            //createNewRow();
+        } else {
+            alert('Game over!!!');
+            alert(password);
+        }
     }
-
-    //Lock previous row buttons
-    lockButtons();
-
-    //Change for the next attempt (row)
-    currentRow++;
-
-    if (currentRow <= MAX_ATTEMPTS) {
-        document.getElementById('row' + currentRow).style.display = 'flex';
-        answerInput = ['white', 'white', 'white', 'white'];
-        //createNewRow();
-    } else {
-        alert('Game over!!!');
-        alert(password);
-    }
-
 }
 
 /**
@@ -183,6 +202,12 @@ function lockButtons() {
     document.getElementById('buttonRow' + currentRow).style.display = 'none';
 }
 
+/**
+ * This function generates the password randomically
+ * 
+ * @author Arthur Zuliani
+ * @since 20220223
+ */
 function passGenerator() {
 
     for (let i = 0; i < password.length; i++) {
@@ -210,11 +235,15 @@ function passGenerator() {
     console.log(password);
 }
 
+/**
+ * This function generates a number randomically
+ * 
+ * @param min
+ * @param max
+ * 
+ * @author Arthur Zuliani
+ * @since 20220223
+ */
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
-
-function showHint() {
-    document.getElementById('hintBox').style.visibility = 'visible';
-}
-
